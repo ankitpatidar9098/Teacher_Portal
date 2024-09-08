@@ -1,0 +1,19 @@
+// Close the modal
+document.querySelector('#addStudentModal .close').click();
+
+// Clear the form fields
+document.querySelector('form').reset();
+
+// Add the new student to the table
+const studentList = document.querySelector('tbody');
+studentList.insertAdjacentHTML('beforeend', `
+  <tr>
+    <td><%= j @student.name %></td>
+    <td><%= j @student.subject %></td>
+    <td><%= j @student.marks %></td>
+    <td>
+      <%= link_to "Edit", edit_student_path(@student), class: "btn" %>
+   <%= link_to "Delete", student_path(student), method: :delete, data: { turbo_confirm: "Are you sure?" }, class: "btn", data: { turbo: true } %>
+    </td>
+  </tr>
+`);
