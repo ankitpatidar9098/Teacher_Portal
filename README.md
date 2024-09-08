@@ -7,18 +7,20 @@ Things you may want to cover:
 
 * Ruby version
 
-* System dependencies
+This Rails application supports user authentication through login and signup, using session management to track logged-in users.
 
-* Configuration
+## Features
+- Teacher signup
+- Teacher login
+- Session-based authentication
 
-* Database creation
+## Setup Instructions
 
-* Database initialization
+### 1. Clone the repository
+```bash
+git clone https://github.com/ankitpatidar9098/Teacher_Portal.git
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+cd Teacher_Portal
+bundle install
+rails db:migrate
+rails s
